@@ -1,4 +1,4 @@
-course_id = 'UBM-DEEP-LEARNING-1'
+course_id = 'UBM-MACHINE-LEARNING-1'
 github_repo = 'acubillosunal/%s'%course_id
 zip_file_url="https://github.com/%s/archive/main.zip"%github_repo
 
@@ -17,7 +17,7 @@ import requests, zipfile, io, os, shutil
 def init(force_download=False):
     if force_download or not os.path.exists("local"):
         print("replicating local resources")
-        dirname = course_id+"-master/"
+        dirname = course_id+"-main/"
         if os.path.exists(dirname):
             shutil.rmtree(dirname)
         r = requests.get(zip_file_url)
@@ -27,4 +27,3 @@ def init(force_download=False):
             shutil.rmtree("local")
         shutil.move(dirname+"/local", "local")
         shutil.rmtree(dirname)
-
