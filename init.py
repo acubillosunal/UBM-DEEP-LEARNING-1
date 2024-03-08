@@ -1,4 +1,4 @@
-course_id = 'UBM-MACHINE-LEARNING-1'
+course_id = 'UBM-DEEP-LEARNING-1'
 github_repo = 'acubillosunal/%s'%course_id
 zip_file_url="https://github.com/%s/archive/main.zip"%github_repo
 
